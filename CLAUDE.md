@@ -27,7 +27,7 @@
 
 ## Business rules cốt lõi
 
-- **Low stock:** `minQuantity != null && quantity <= minQuantity`. `minQuantity = null` nghĩa là không theo dõi.
+- **Low stock:** `minQuantity != null && quantity + lentQuantity <= minQuantity` (`lentQuantity` = số đơn vị đang cho mượn một phần, đã trừ khỏi `quantity` nhưng vẫn thuộc về người dùng). `minQuantity = null` nghĩa là không theo dõi.
 - **Item status:** `stored | inUse | lent | broken | disposed`. **Box type:** `room | cabinet | shelf | box | drawer | other`.
 - **Chống vòng lặp cây box:** khi move, parent mới không được là chính nó hoặc con cháu của nó; `newParentId = null` → đưa về root.
 - **Mượn/trả:** chỉ cho mượn item đang `stored`/`inUse`; lend → status `lent`; return → `actual_return_date = NOW()` và status về `stored`.
