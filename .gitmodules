@@ -1,0 +1,6 @@
+[submodule "BE_GoLang"]
+	path = BE_GoLang
+	url = https://github.com/namtruong244/inventory-backend.git
+[submodule "FE_Flutter"]
+	path = FE_Flutter
+	url = https://github.com/namtruong244/inventory-frontend.git
