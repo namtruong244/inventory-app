@@ -40,7 +40,9 @@
 cd BE_GoLang && make db-up && make run          # API tại http://localhost:8080
 cd FE_Flutter && flutter run --dart-define=API_BASE_URL=http://localhost:8080
 ```
-Android emulator tự dùng `http://10.0.2.2:8080`. iPhone thật: `./run_ios_release.sh` (tự dò IP LAN của Mac).
+- `BE_GoLang/.env` là tuỳ chọn ở local (`cp .env.example .env`); không có thì backend dùng cấu hình dev mặc định. `make docker-up` (container `api` chạy `APP_ENV=production`) mới bắt buộc `JWT_SECRET` ≥ 32 ký tự.
+- Không truyền `API_BASE_URL` thì **mọi thiết bị Android** dùng `http://10.0.2.2:8080` — chỉ đúng với emulator; điện thoại Android thật phải truyền IP LAN của máy chạy backend.
+- iPhone thật: `./run_ios_release.sh` (tự dò IP LAN của Mac).
 
 ## Quy ước làm việc
 
