@@ -10,7 +10,7 @@
 | `FE_Flutter/` | App mobile Flutter (iOS/Android), Provider state management | [FE_Flutter/CLAUDE.md](FE_Flutter/CLAUDE.md) |
 
 - `BE_GoLang/` là **git repo riêng** (có `.git` lồng bên trong). Commit backend phải chạy git trong `BE_GoLang/`, không phải ở root.
-- Nguồn đặc tả API chuẩn: [BE_GoLang/AGENTS.md](BE_GoLang/AGENTS.md) (schema, endpoints, business rules). `FE_Flutter/AGENtS.md` là bản cũ hơn, đã lỗi thời — không dùng làm nguồn chân lý. `FE_Flutter/openapi.yaml` là OpenAPI spec tham khảo.
+- Nguồn đặc tả API chuẩn: [BE_GoLang/AGENTS.md](BE_GoLang/AGENTS.md) (schema, endpoints, business rules). `FE_Flutter/openapi.yaml` là OpenAPI spec tham khảo.
 - Khi spec và code lệch nhau, **code là chân lý**; cập nhật spec nếu thay đổi có chủ đích.
 
 ## Hợp đồng API giữa BE và FE (bắt buộc giữ đồng bộ)
